@@ -1,5 +1,5 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryColumn } from "typeorm";
-import { v4 as uuid } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import { Category } from "./Category";
 
 @Entity("videos")
@@ -29,7 +29,7 @@ export class Video {
 
     constructor() {
         if (!this.id) {
-            this.id = uuid()
+            this.id = uuidv4()
         }
     }
 }
