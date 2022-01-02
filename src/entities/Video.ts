@@ -25,7 +25,7 @@ export class Video {
     category: Category
 
     @CreateDateColumn()
-    created_id: Date
+    created_at: Date
 
     constructor() {
         if (!this.id) {
